@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fillful: Block Puzzle</title>
+<!--
+  开发者网站首页（M6-T6 交付物）。
+  ⚠️ 部署前必改：本文件与 privacy/index.html 里的联系邮箱 contact@example.com。
+  部署方式见同目录 README.md（app-ads.txt 必须落在**站点根目录**）。
+-->
+<style>
+  :root { --sea:#1287b8; --deep:#0b5f86; --ink:#123b4d; --cream:#fff4dc; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 18px; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, #46bde4 0%, var(--sea) 46%, var(--deep) 100%);
+  }
+  .card {
+    width: 100%; max-width: 620px; padding: 34px 30px 26px;
+    background: var(--cream); border: 4px solid var(--ink); border-radius: 28px;
+    box-shadow: 0 10px 0 rgba(9,45,63,.35);
+  }
+  h1 { margin: 0 0 8px; font-size: 30px; }
+  .tag { margin: 0 0 20px; font-size: 17px; color: #2a6e8d; }
+  p, li { line-height: 1.7; font-size: 16px; }
+  ul { padding-left: 22px; }
+  a { color: var(--deep); }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .btn {
+    display: inline-block; padding: 11px 20px; border-radius: 16px;
+    border: 3px solid var(--ink); background: var(--sea); color: #fff;
+    text-decoration: none; font-weight: 600;
+  }
+  .btn.ghost { background: transparent; color: var(--ink); }
+  footer { margin-top: 26px; font-size: 13px; color: #4b7d92; }
+</style>
+</head>
+<body>
+<main class="card">
+  <h1>Fillful: Block Puzzle</h1>
+  <p class="tag">Rotate 11 blocks and fill the 8&times;8 board &mdash; a calm puzzle with no timer and no pressure.</p>
+  <p>Fillful is a portrait, one-handed block-filling puzzle for Android.</p>
+  <ul>
+    <li>240 levels, from gentle openings to genuinely tricky finals</li>
+    <li>Undo, reset and a full solution preview</li>
+    <li>Progress saved on your device; playable offline</li>
+  </ul>
+  <div class="links">
+    <a class="btn" href="privacy/">Privacy Policy</a>
+    <a class="btn ghost" href="app-ads.txt">app-ads.txt</a>
+  </div>
+  <footer>Contact: <a href="mailto:contact@example.com">contact@example.com</a></footer>
+</main>
+</body>
+</html>
