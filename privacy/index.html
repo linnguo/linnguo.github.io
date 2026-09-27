@@ -7,8 +7,8 @@
 <!--
   隐私政策页（M6-T6 交付物）。
   用途：① Play 商店列表「隐私政策」URL（必填）；② AdMob UMP（GDPR 消息）里的隐私政策 URL。
-  ⚠️ 内容必须与 Play「数据安全」表单声明一致（收集广告 ID / 大致位置 / 共享给 Google AdMob）。
-  ⚠️ 部署前必改：联系邮箱 linn.guo@qq.com；生效日期如有变动同步修改。
+  维护：内容必须与 Play「数据安全」表单声明一致（广告 ID / 大致位置 / 共享给 Google AdMob）；
+        修改内容后同步更新页面顶部的 Last updated 日期。
 -->
 <style>
   :root { --sea:#1287b8; --deep:#0b5f86; --ink:#123b4d; --cream:#fff4dc; }
@@ -38,7 +38,7 @@
 <main class="card">
   <a class="back" href="../">&larr; Fillful: Block Puzzle</a>
   <h1>Privacy Policy</h1>
-  <p class="updated">Applies to the Android game <strong>Fillful: Block Puzzle</strong> &middot; Last updated: September 26, 2026</p>
+  <p class="updated">Applies to the Android game <strong>Fillful: Block Puzzle</strong> &middot; Last updated: September 27, 2026</p>
 
   <p>This policy explains what information is and is not handled when you play Fillful: Block Puzzle (the &ldquo;Game&rdquo;). It is written to match the data practices we declare on Google Play.</p>
 
@@ -54,24 +54,33 @@
     <li><strong>approximate location</strong> derived from your IP address (country / region level only);</li>
     <li>ad interaction data (which ads were requested, shown, or clicked) used for delivery, frequency capping, and reporting.</li>
   </ul>
-  <p>We do not receive or store this information ourselves. Google&rsquo;s handling of it is described in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>. The Game does not include any other analytics or crash-reporting SDK.</p>
+  <p>We do not receive or store this information ourselves. Google&rsquo;s handling of it is described in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>. The Game also processes limited usage data for its own analytics &mdash; see section 3.</p>
 
-  <h2>3. Your choices and consent</h2>
+  <h2>3. Usage data we process to improve the Game</h2>
+  <p>The Game uses <strong>Google Analytics for Firebase</strong> (Firebase Analytics) and <strong>Firebase Crashlytics</strong>, both provided by Google. They tell us which levels players get stuck on, and why the Game occasionally crashes. When you play, the following is processed:</p>
+  <ul>
+    <li><strong>Level events:</strong> the number of the level you start (for example &ldquo;87&rdquo; &mdash; a number, not a name), how many moves you used, whether it was your first clear of that level, whether you set a new best, and how long the level took you;</li>
+    <li><strong>App and device information:</strong> app version, device model, operating system version, language, and your device&rsquo;s advertising ID;</li>
+    <li><strong>Crash reports:</strong> technical details about a crash or uncaught error (app version, device model, and where the error occurred) so we can find and fix the cause.</li>
+  </ul>
+  <p>This data is used only in aggregate &mdash; to see where players struggle and to fix crashes. We do not sell it and we do not use it to build a profile of you. These events contain <strong>no name, no email address and no user ID</strong>, and they are not linked to your game progress, which stays on your device (section 1). Google&rsquo;s handling of this data is described in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>.</p>
+
+  <h2>4. Your choices and consent</h2>
   <ul>
     <li><strong>Personalized ads:</strong> you can reset or delete your advertising ID, and opt out of personalized advertising, in Android <em>Settings &rarr; Privacy &rarr; Ads</em> (wording varies by device).</li>
-    <li><strong>EEA, UK and Switzerland:</strong> before any ad-related data is collected you are shown a consent message from Google&rsquo;s User Messaging Platform. Advertising is limited to what your choice allows. You may change your choice by clearing the Game&rsquo;s data in Android <em>Settings &rarr; Apps &rarr; Fillful &rarr; Storage &rarr; Clear data</em>; the consent message will be shown again on the next launch.</li>
+    <li><strong>EEA, UK and Switzerland:</strong> before any ad-related or analytics data is collected you are shown a consent message from Google&rsquo;s User Messaging Platform. Advertising <em>and</em> usage analytics (section 3) are both limited to what your choice allows &mdash; if you decline, <strong>no analytics or crash data is collected</strong>. You may change your choice by clearing the Game&rsquo;s data in Android <em>Settings &rarr; Apps &rarr; Fillful &rarr; Storage &rarr; Clear data</em>; the consent message will be shown again on the next launch.</li>
   </ul>
 
-  <h2>4. Children</h2>
-  <p>The Game is intended for a general audience aged <strong>13 and over</strong> and is not directed to children under 13. We do not knowingly collect information from children under 13. If you believe a child has provided information through the advertising SDK, please contact us and we will help you exercise the choices above.</p>
+  <h2>5. Children</h2>
+  <p>The Game is intended for a general audience aged <strong>13 and over</strong> and is not directed to children under 13. We do not knowingly collect information from children under 13. If you believe a child has provided information through the advertising or analytics SDKs, please contact us and we will help you exercise the choices above.</p>
 
-  <h2>5. Data retention and security</h2>
-  <p>We keep no server-side database of players, so there is no personal data for us to retain or delete. Data collected by the advertising SDK is transmitted over encrypted connections (HTTPS/TLS) and retained by Google according to its own policies.</p>
+  <h2>6. Data retention and security</h2>
+  <p>We keep no server-side database of players, so there is no personal data for us to retain or delete. Data collected by the advertising, analytics and crash-reporting SDKs is transmitted over encrypted connections (HTTPS/TLS) and retained by Google according to its own policies &mdash; analytics event data is kept for up to 14 months by default.</p>
 
-  <h2>6. Changes to this policy</h2>
+  <h2>7. Changes to this policy</h2>
   <p>If this policy changes, we will update the date at the top of this page. Material changes will also be reflected in the Google Play listing.</p>
 
-  <h2>7. Contact</h2>
+  <h2>8. Contact</h2>
   <p>Questions about this policy or about your data: <a href="mailto:linn.guo@qq.com">linn.guo@qq.com</a></p>
 
   <footer>Fillful: Block Puzzle &middot; Google Play package name: com.jystudio.fillful</footer>
