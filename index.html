@@ -3,37 +3,44 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Fillful: Block Puzzle</title>
+<title>Android Games</title>
 <!--
-  开发者网站首页（M6-T6 交付物）。
-  ⚠️ 部署前必改：本文件与 privacy/index.html 里的联系邮箱 linn.guo@qq.com。
-  部署方式见同目录 README.md（app-ads.txt 必须落在**站点根目录**）。
+  开发者网站首页（工作室主页）。
+  用途：① Play 商店「网站」字段（开发者账号级，全部 App 共用）；② Google 的 app-ads.txt 爬虫从这里出发。
+  维护：新增游戏 → 复制下面一张 .game 卡片（改名字 / 简介 / 隐私政策链接）；应用上线后可加 Play 商店链接。
+  联系邮箱须与 Play 商店列表一致：linn.guo@qq.com（本文件与 privacy/index.html）。
+  维护 / 部署 / 多项目共用规则 = 见同目录 README.md（app-ads.txt 必须落在**站点根目录**）。
 -->
 <style>
   :root { --sea:#1287b8; --deep:#0b5f86; --ink:#123b4d; --cream:#fff4dc; }
   * { box-sizing: border-box; }
   body {
-    margin: 0; padding: 32px 18px; min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
+    margin: 0; padding: 32px 18px 48px; min-height: 100vh;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--ink);
     background: linear-gradient(180deg, #46bde4 0%, var(--sea) 46%, var(--deep) 100%);
   }
   .card {
-    width: 100%; max-width: 620px; padding: 34px 30px 26px;
+    width: 100%; max-width: 620px; margin: 0 auto; padding: 34px 30px 26px;
     background: var(--cream); border: 4px solid var(--ink); border-radius: 28px;
     box-shadow: 0 10px 0 rgba(9,45,63,.35);
   }
   h1 { margin: 0 0 8px; font-size: 30px; }
-  .tag { margin: 0 0 20px; font-size: 17px; color: #2a6e8d; }
+  .tag { margin: 0 0 22px; font-size: 17px; color: #2a6e8d; }
+  h2 { margin: 26px 0 12px; font-size: 19px; }
   p, li { line-height: 1.7; font-size: 16px; }
-  ul { padding-left: 22px; }
   a { color: var(--deep); }
-  .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .game {
+    border: 3px solid var(--ink); border-radius: 20px;
+    padding: 16px 18px 14px; margin: 0 0 14px; background: #fff;
+  }
+  .game h3 { margin: 0 0 6px; font-size: 18px; }
+  .game p { margin: 0 0 12px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
   .btn {
-    display: inline-block; padding: 11px 20px; border-radius: 16px;
+    display: inline-block; padding: 9px 16px; border-radius: 14px;
     border: 3px solid var(--ink); background: var(--sea); color: #fff;
-    text-decoration: none; font-weight: 600;
+    text-decoration: none; font-weight: 600; font-size: 15px;
   }
   .btn.ghost { background: transparent; color: var(--ink); }
   footer { margin-top: 26px; font-size: 13px; color: #4b7d92; }
@@ -41,18 +48,20 @@
 </head>
 <body>
 <main class="card">
-  <h1>Fillful: Block Puzzle</h1>
-  <p class="tag">Rotate 11 blocks and fill the 8&times;8 board &mdash; a calm puzzle with no timer and no pressure.</p>
-  <p>Fillful is a portrait, one-handed block-filling puzzle for Android.</p>
-  <ul>
-    <li>240 levels, from gentle openings to genuinely tricky finals</li>
-    <li>Undo, reset and a full solution preview</li>
-    <li>Progress saved on your device; playable offline</li>
-  </ul>
-  <div class="links">
-    <a class="btn" href="privacy/">Privacy Policy</a>
-    <a class="btn ghost" href="app-ads.txt">app-ads.txt</a>
+  <h1>Android Games</h1>
+  <p class="tag">Calm, one-handed puzzle games for Android &mdash; made by an independent developer.</p>
+
+  <h2>Games</h2>
+
+  <!-- ↓ 新增游戏：复制这张 .game 卡片（改名字 / 简介 / 链接），并保留各自独立的一条隐私政策页 -->
+  <div class="game">
+    <h3>Fillful: Block Puzzle</h3>
+    <p>Rotate 11 blocks and fill the 8&times;8 board &mdash; 240 levels, no timer, no pressure. Progress is saved on your device and the game plays offline.</p>
+    <div class="links">
+      <a class="btn" href="privacy/">Privacy Policy</a>
+    </div>
   </div>
+
   <footer>Contact: <a href="mailto:linn.guo@qq.com">linn.guo@qq.com</a></footer>
 </main>
 </body>
