@@ -10,7 +10,8 @@
 | 文件 | 线上 URL | 用途 |
 |---|---|---|
 | `index.html` | `https://linnguo.github.io/` | 开发者网站首页（Play「网站」字段要能打开） |
-| `privacy/index.html` | `https://linnguo.github.io/privacy/` | **隐私政策**（Play 列表必填 + AdMob UMP 消息引用） |
+| `privacy/index.html` | `https://linnguo.github.io/privacy/` | **隐私政策**（Fillful: Block Puzzle，无 slug，保持不动） |
+| `privacy/carful/index.html` | `https://linnguo.github.io/privacy/carful/` | **隐私政策**（Carful: Car Puzzle，包名 `com.jystudio.parkingpuzzle`） |
 | `app-ads.txt` | `https://linnguo.github.io/app-ads.txt` | AdMob 合规文件（**必须站点根目录**） |
 
 `app-ads.txt` 内容 = `google.com, pub-7687550857369489, DIRECT, f08c47fec0942fa0`
