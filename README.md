@@ -13,6 +13,9 @@
 | `privacy/index.html` | `https://linnguo.github.io/privacy/` | **隐私政策**（Fillful: Block Puzzle，无 slug，保持不动） |
 | `privacy/carful/index.html` | `https://linnguo.github.io/privacy/carful/` | **隐私政策**（Carful: Car Puzzle，包名 `com.jystudio.parkingpuzzle`） |
 | `privacy/postcard-fill/index.html` | `https://linnguo.github.io/privacy/postcard-fill/` | **隐私政策**（Postcard Fill: World Tour，包名 `com.jystudio.postcardfill`） |
+| `terms/fillful/index.html` | `https://linnguo.github.io/terms/fillful/` | **服务条款**（Fillful: Block Puzzle · `com.jystudio.fillful`） |
+| `terms/carful/index.html` | `https://linnguo.github.io/terms/carful/` | **服务条款**（Carful: Car Puzzle · `com.jystudio.parkingpuzzle`） |
+| `terms/postcard-fill/index.html` | `https://linnguo.github.io/terms/postcard-fill/` | **服务条款**（Postcard Fill: World Tour · `com.jystudio.postcardfill`） |
 | `app-ads.txt` | `https://linnguo.github.io/app-ads.txt` | AdMob 合规文件（**必须站点根目录**） |
 
 `app-ads.txt` 内容 = `google.com, pub-7687550857369489, DIRECT, f08c47fec0942fa0`
@@ -23,6 +26,7 @@
 - **一个域名只有一份 `app-ads.txt`，且必须在域名根**：项目仓库的 Pages 站点根永远带 `/仓库名/` 子路径（如 `linnguo.github.io/blog/app-ads.txt`）→ **AdMob 爬不到**。所以必须用本仓库（`<用户名>.github.io` 用户站点仓库）或绑自定义域名。
 - 改 `app-ads.txt`：**只追加、不删旧行、永不留空 / 404**（空文件 = 声明「无授权卖家」，影响 Google 广告需求）。改完去 AdMob 后台点验证并观察转绿（爬虫约每天一次）。
 - 联系邮箱须与 Play 商店列表「联系方式」一致：**`linn.guo@qq.com`**。
+- **每个 App 一条服务条款 URL**：Play 声明交易者后，「应用内容 → 交易者身份」里每个应用都要填服务条款链接 → 本站 `/terms/<slug>/`；页里的提供者姓名（郭忠林）/ 邮箱 / 包名必须与 Play 公示一致，别串用别家页面。
 - 内容口径须与 Play「数据安全」表单一致（广告 ID + 大致位置 + 共享 Google AdMob + 用法数据：Firebase Analytics 关卡埋点 / Crashlytics 崩溃日志，保留 14 个月）；不写时效词 / 促销词；语言 = en-US。
 
 ## 改内容的流程（本地）
@@ -54,7 +58,8 @@ curl.exe -sS  https://linnguo.github.io/               # 首页
 ## 新增一个游戏（清单）
 
 1. **隐私政策页**：复制 `privacy/index.html` → `privacy/<slug>/index.html`，替换 ① `<title>` 与 `<h1>`；② `Applies to the Android game …` 行；③ 正文 / 页脚里的游戏名与包名；④ `Last updated`；⑤ 仅当 SDK 数据实践不同才改第 2/3 节（广告 / 分析段落）。
-2. **首页**：`index.html` → `Games` 区复制一张 `.game` 卡片，改名字 / 简介 / 链接到 `privacy/<slug>/`（应用上线后可加 Play 商店链接）。
+2. **服务条款页**：复制 `terms/fillful/index.html` → `terms/<slug>/index.html`，替换 ① `<title>` / `<h1>` 下的游戏名行；② 正文与页脚的游戏名、包名；③ `Last updated`；④ 隐私政策链接（Fillful 是 `../../privacy/`，其余是 `../../privacy/<slug>/`）。Play 的「交易者身份 → 服务条款链接」逐 App 填这条 URL。
+3. **首页**：`index.html` → `Games` 区复制一张 `.game` 卡片，改名字 / 简介 / 链接到 `privacy/<slug>/`（应用上线后可加 Play 商店链接）。
 3. **Play Console**：新 App → 商店列表 → 隐私政策 URL = `https://linnguo.github.io/privacy/<slug>/`。「网站」字段**不用动**（开发者账号级，全部 App 共用）。
 4. **AdMob**：新 App 建广告单元；确认隐私消息覆盖到新 App，且其中的隐私政策 URL 指向它自己的页面。`app-ads.txt` **不用动**（同账号 `pub-…` 一行覆盖全部 App）。
 5. **Firebase**：新 App 注册（同一项目加 App 或新项目均可）；SDK 口径不变 → 政策文案无需改。
